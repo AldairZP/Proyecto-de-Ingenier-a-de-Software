@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="shortcut icon" href="img/carpeta.ico" type="image/x-icon">
+  <title>Eventos</title>
+  <link rel="stylesheet" href="css/styleEvent.css" />
+</head>
+<body>
+  <form action="">
+    <h1>Eventos</h1>
+    <select name="" id="tipoEvento">
+      <option value="Curso">Curso</option>
+      <option value="Taller">Taller</option>
+      <option value="Retiro">Retiro</option>
+    </select>
+    <select name="Casa" id="Albergue">
+      <label for="">Casa</label>
+      <option value="Albergue 1">Albergue 1</option>
+      <option value="Albergue 2">Albergue 2</option>
+      <option value="Otro">Otro</option>
+    <input type="number" id='Eventos-Presupuesto' placeholder="Presupuesto" required>
+    <div class="boxes">
+      <p>Hombres:</p><input type="number" class="Evento-Asistentes" id="Eventos-Asistentes-Hombres" placeholder="Numero de Asistentes Hombres" required oninput="sumarAsistentes()">
+    </div>
+    <div class="boxes">
+      <p>Mujeres:</p><input type="number" class="Evento-Asistentes" id="Eventos-Asistentes-Mujeres" placeholder="Numero de Asistentes Mujeres" required oninput="sumarAsistentes()">
+    </div>
+    <div class="boxes">
+      <p>Jovenes:</p><input type="number" class="Evento-Asistentes" id='Evento-Asistentes-Jovenes-Hombres' placeholder="Numero de Asistentes Jovenes Hombres" required oninput="sumarAsistentes()">
+    </div>
+    <div class="boxes">
+      <p>Jovenes:</p><input type="number" class="Evento-Asistentes" id='Evento-Asistentes-Jovenes-Mujeres' placeholder="Numero de Asistentes Jovenes Mujeres" required oninput="sumarAsistentes()">
+    </div>
+    <div class="boxes">
+      <p>Niños:</p><input type="number" class="Evento-Asistentes" id="Evento-Asistentes-Ninos" placeholder="Numero de Asistentes Niños" required oninput="sumarAsistentes()">
+    </div>
+    <div class="boxes">
+      <p>Niñas:</p><input type="number" class="Evento-Asistentes" id="Evento-Asistentes-Ninas" placeholder="Numero de Asistentes Niñas" required oninput="sumarAsistentes()">
+    </div>
+    <div class="boxes">
+      <p>Asistentes:</p><input type="number" class="Evento-Asistentes" id="Evento-Asistentes-Total" value="0" readonly>
+    </div>
+    <input type="date" name="" id="Eventos-Fecha" required/>
+    
+    <!-- <textarea name="" id="" cols="30" rows="10" id="Eventos-Descripcion" placeholder="Descripcion" required></textarea> -->
+    <textarea name="" id="Descripcion" cols="30" rows="10" placeholder="Descripcion" required></textarea>
+    <button id="Eventos-Boton">Enviar</button>
+  </form>
+
+  <script src="js/app2.js">
+
+  </script>
+</body>
+</html>
+<!-- 
+
+Eventos-Curso: ID del campo de entrada de texto para el curso.
+Eventos-Lugar: ID del campo de entrada de texto para el lugar.
+Eventos-Presupuesto: ID del campo de entrada numérica para el presupuesto.
+Eventos-Numero-hombres: ID del campo de entrada numérica para el número de asistentes hombres.
+Eventos-Numero-Mujeres: ID del campo de entrada numérica para el número de asistentes mujeres.
+Eventos-Descripcion: ID del área de texto para la descripción del evento.
+Eventos-Fecha: ID del campo de entrada de fecha para la fecha del evento.
+Eventos-Boton: ID del botón de envío del formulario.
+ -->

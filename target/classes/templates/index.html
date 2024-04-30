@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/carpeta.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Registro de Visitas</title>
+</head>
+
+<body>
+
+    <div class="container" id="container">
+        <div class="form-container sign-up">
+            <form onsubmit="enviarExterna();" >
+                <h1>Registro de vistas</h1>
+                <span><strong>Externa</strong></span>
+                <input type="text" id="Externa-Nombre" placeholder="Nombre" required>
+                <input type="text" id="Externa-Externa" value="Externa" readonly>
+                <select name="Casa" id="Albergue">
+                    <label for="">Casa</label>
+                    <option value="Albergue 1">Albergue 1</option>
+                    <option value="Albergue 2">Albergue 2</option>
+                    <option value="Otro">Otro</option>
+                <input type="date" id="Externa-Fecha" placeholder="" required>
+                <input type="number" id="Externa-Presupuesto" placeholder="Presupuesto" required>
+                <input type="text" id="Externa-Motivo" placeholder="Motivo" required>
+                <button id="Externa-Boton" type="submit">Enviar</button>
+            </form>
+        </div>
+        <div class="form-container sign-in">
+            <form>
+                <h1>Registro de vistas</h1>
+
+                <span><strong>Interna</strong></span>
+                <input type="text" id="Interna-Nombre" placeholder="Nombre" required>
+                <input type="text" id="Interna-Interna" value="Interna" readonly>
+                <input type="date" id="Interna-Fecha" placeholder="" required>
+                <select name="Lugar" id="Lugar">
+                    <label for="">lugar</label>
+                    <option value="Albergue 1">Albergue 1</option>
+                    <option value="Albergue 2">Albergue 2</option>
+                    <option value="Otro">Otro</option>
+                </select>
+                <input type="text" id="Interna-Perosna" placeholder="Persona que visito" required>
+                <textarea name="" id="Descripcion" cols="30" rows="10" required placeholder="Descripcion"></textarea>
+
+                <button id="Interna-Boton">Enviar</button>
+
+            </form>
+        </div>
+        <div class="toggle-container">
+            <div class="toggle">
+                <div class="toggle-panel toggle-left">
+                    <h1>Registro de Visitas Externa</h1>
+                    <p>Si quieres registrar datos pero en Vistas Interna Presiona el boton</p>
+                    <button class="hidden" id="Externa-Interna">Click aqui</button>
+                    <p>Quieres registrar Eventos , <a href="/eventos" target="_blank">Click aqui</a></p>
+
+                </div>
+                <div class="toggle-panel toggle-right">
+                    <h1>Registro de Visitas Interna</h1>
+                    <p>Si quieres registrar datos pero en Vistas Externa Presiona el boton</p>
+                    <button class="hidden" id="Interna-Externa">Click aqui</button>
+                    <p>Quieres registrar Eventos , <a href="/eventos" target="_blank">Click aqui</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/app.js"></script>
+
+</body>
+
+</html>
+
+<!-- 
+Interna    
+Interna-Nombre: ID del campo de entrada de texto para el nombre.
+Interna-Interna: ID del campo de entrada de texto de solo lectura con el valor "Interna".
+Interna-Fecha: ID del campo de entrada de fecha.
+Interna-Presupuesto: ID del campo de entrada numérica para el presupuesto.
+Interna-Lugar: ID del campo de entrada de texto para el lugar.
+Interna-Boton: ID del botón de envío del formulario.
+
+
+Externa
+Externa-Nombre: ID del campo de entrada de texto para el nombre.
+Externa-Externa: ID del campo de entrada de texto de solo lectura con el valor "Externa".
+Externa-Fecha: ID del campo de entrada de fecha.
+Externa-Presupuesto: ID del campo de entrada numérica para el presupuesto.
+Externa-Motivo: ID del campo de entrada de texto para el motivo de la visita.
+Externa-Casa: ID del campo de entrada de texto para la casa visitada.
+Externa-Boton: ID del botón de envío del formulario -->
